@@ -1,1 +1,18 @@
-<p>Voici la liste de tes taches</p>
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>listetache</title>
+ </head>
+ <body>
+
+ 	{% for obj in object_tache %}
+
+ 		{{ obj.nomtache }}<br>
+ 		{{ obj.description }}<br>
+ 		{{ obj.debut }}<br>
+ 		{{ obj.fin }}<br>
+
+ 	{% endfor %}
+
+ </body>
+ </html>

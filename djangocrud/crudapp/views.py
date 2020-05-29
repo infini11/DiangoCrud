@@ -8,8 +8,14 @@ from .models import Tache
 def home(request):
 	return render(request, "home.html")
 
+
 def listetache(request):
-	return render(request, "listetache.html")
+	queryset = Tache.objects.all()
+	detail = {
+		"object_tache": queryset
+	}
+
+	return render(request, "listetache.html", detail)  
 
 
 def enregistrer(request):
@@ -25,8 +31,13 @@ def enregistrer(request):
 			tache = Tache(nomtache=nomtache, description=description, debut=debut, fin=fin) 
 			tache.save()
 
-			return render(request, "listetache.html")
+			queryset = Tache.objects.all()
+			detail = {
+				"object_tache": queryset
+			}
+			return render(request, "listetache.html", detail)
 
 	context = {"form" : form}
 
 	return render(request, "formulaire.html", context)
+
