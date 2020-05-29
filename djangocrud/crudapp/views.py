@@ -11,11 +11,11 @@ def home(request):
 
 def listetache(request):
 	queryset = Tache.objects.all()
-	detail = {
+	context = {
 		"object_tache": queryset
 	}
 
-	return render(request, "listetache.html", detail)  
+	return render(request, "listetache.html", context)  
 
 
 def enregistrer(request):
@@ -32,10 +32,10 @@ def enregistrer(request):
 			tache.save()
 
 			queryset = Tache.objects.all()
-			detail = {
+			context = {
 				"object_tache": queryset
 			}
-			return render(request, "listetache.html", detail)
+			return render(request, "listetache.html", context)
 
 	context = {"form" : form}
 

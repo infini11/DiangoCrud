@@ -1,18 +1,34 @@
  <!DOCTYPE html>
  <html>
  <head>
+ 	<meta charset="utf-8">
  	<title>listetache</title>
+ 	<link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
  </head>
  <body>
+ 	<table class="table table-dark">
+ 		<thead>
+ 			<tr>
+	 			<th>Nom Tache</th>
+	 			<th>Description</th>
+	 			<th>Debut Tache</th>
+	 			<th>FinTache</th>
+ 			</tr>
+ 		</thead>>
+ 		<tbody>
+ 			{% for obj in object_tache %}
+ 			<tr>
+		 		<td>{{ obj.nomtache }}</td>
+		 		<td>{{ obj.description }}</td>
+		 		<td>{{ obj.debut }}</td>
+		 		<td>{{ obj.fin }}</td>
+		 	</tr>
 
- 	{% for obj in object_tache %}
+	 		{% endfor %}
+ 		</tbody>
 
- 		{{ obj.nomtache }}<br>
- 		{{ obj.description }}<br>
- 		{{ obj.debut }}<br>
- 		{{ obj.fin }}<br>
-
- 	{% endfor %}
+ 	</table>
 
  </body>
  </html>
