@@ -8,6 +8,8 @@ app_name = "crudapp"
 
 urlpatterns = [
     path('', views.home),
-    path('enregistrer/', views.enregistrer, name="enregistrer"),
-    path('listetache/', views.listetache),
+    path('enregistrer/', views.enregistrerTache, name="enregistrer"),
+    path('listetache/', views.listeTache),
+    path('update/', views.updateTache, name="update"),
+    path('delete/', views.deleteTache, name="delete"),
 ]

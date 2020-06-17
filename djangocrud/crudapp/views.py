@@ -9,7 +9,7 @@ def home(request):
 	return render(request, "home.html")
 
 
-def listetache(request):
+def listeTache(request):
 	queryset = Tache.objects.all()
 	context = {
 		"object_tache": queryset
@@ -18,7 +18,7 @@ def listetache(request):
 	return render(request, "listetache.html", context)  
 
 
-def enregistrer(request):
+def enregistrerTache(request):
 	form = TacheForm(data=request.POST)
 	if (request.method == "POST"):
 		if form.is_valid():
@@ -40,4 +40,21 @@ def enregistrer(request):
 	context = {"form" : form}
 
 	return render(request, "formulaire.html", context)
+
+
+def updateTache(request, id):
+	instance = Tache.objects.get(id=id)
+	form =TacheForm(data=request.POST, instance=instance)
+	if form.is_valid():
+		form.save()
+		return render(request, "formulaire.html")
+
+	context = {"form": form}
+	return render(request, "update.html", context)
+
+
+def deleteTache(request, id):
+	instance = Tache.objects.get(id=id)
+	instance.delete()
+	return redirect ("listetache.html")
 

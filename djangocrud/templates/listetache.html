@@ -23,6 +23,8 @@
 		 		<td>{{ obj.description }}</td>
 		 		<td>{{ obj.debut }}</td>
 		 		<td>{{ obj.fin }}</td>
+		 		<td><a href="{% url 'crudapp:update' obj.id %}"><button>UPDATE</button></a></td>
+		 		<td><a href="{% url 'crudapp:delete' obj.id %}"><button>DELETE</button></a></td>
 		 	</tr>
 
 	 		{% endfor %}
