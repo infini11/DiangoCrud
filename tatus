@@ -1,0 +1,49 @@
+[33mcommit 044a89db229957b0b5fa06c86b5949f9b7b5554b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Satyfa <sakhifa2801@gmail.com>
+Date:   Wed Jun 17 16:35:28 2020 +0000
+
+    Ajout des fonctionnalites de mise a jour et de suppression
+
+[33mcommit 4fd7fc7d93c056eccaea02286b5810ce5e522607[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sakhire <sndm1995@gmail.com>
+Date:   Fri May 29 15:52:38 2020 +0000
+
+    fixing bug with bootstrap
+    - add link from bootstrap wibsite
+    - correct balise error in listpage
+
+[33mcommit 591aaea549e88bb94eafff87573313830e3f0547[m
+Author: Satyfa <sakhifa2801@gmail.com>
+Date:   Fri May 29 15:43:34 2020 +0000
+
+    modification template
+
+[33mcommit 29a88f21c9107cad7ce119e5d26595e8783e0cb2[m
+Author: Satyfa <sakhifa2801@gmail.com>
+Date:   Fri May 29 14:30:02 2020 +0000
+
+    Modification des urls
+
+[33mcommit d6663f2086ebe62b4ddf93e8e9cf42500993ced7[m
+Author: Satyfa <sakhifa2801@gmail.com>
+Date:   Fri May 29 13:17:21 2020 +0000
+
+    Affichage de  des taches enregistrees
+
+[33mcommit d5872c997131fe0f96bbebf639c60dd1b0f13cf9[m
+Author: Satyfa <sakhifa2801@gmail.com>
+Date:   Fri May 22 12:03:32 2020 +0000
+
+    mise place d'un formulaire afin d'enregistrer des taches
+
+[33mcommit 51a296871f726eb6598c4f84bd2957b2049b0601[m
+Author: Satyfa <sakhifa2801@gmail.com>
+Date:   Wed May 20 15:42:18 2020 +0000
+
+    premieres taches remplies
+
+[33mcommit 8b1f286125f04e17d7c1775cb21d866370d4c382[m
+Author: Sakhire <sndm1995@gmail.com>
+Date:   Wed May 20 06:42:32 2020 +0000
+
+    mise en place des taches
