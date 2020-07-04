@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import *
 from .models import Tache
+from django.shortcuts import get_object_or_404, redirect
 
 # Create your views here.
 
@@ -42,19 +43,19 @@ def enregistrerTache(request):
 	return render(request, "formulaire.html", context)
 
 
-def updateTache(request, id):
-	instance = Tache.objects.get(id=id)
-	form =TacheForm(data=request.POST, instance=instance)
+def updateTache(request, id=None):
+	instance = get_object_or_404(Tache, id=id)
+	form =TacheForm(data=request.POST or None, instance=instance)
 	if form.is_valid():
 		form.save()
-		return render(request, "formulaire.html")
+		 return redirect('crudapp:listeTache')
 
 	context = {"form": form}
 	return render(request, "update.html", context)
 
 
-def deleteTache(request, id):
-	instance = Tache.objects.get(id=id)
+def deleteTache(request, id=None):
+	instance = get_object_or_404(Tache, id=id)
 	instance.delete()
-	return redirect ("delete.html")
+	return redirect ('crudapp:delete')
 

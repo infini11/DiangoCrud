@@ -10,8 +10,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('enregistrer/', views.enregistrerTache, name="enregistrer"),
     path('ListeTache/', views.listeTache, name="listeTache"),
-    path('update/', views.updateTache, name="update"),
-    path('delete/', views.deleteTache, name="delete"),
-    path('delete/', views.deleteTache, name="delete"),
-
+    path('<int:id>/update/', views.updateTache, name="update"),
+    path('<int:id>/delete/', views.deleteTache, name="delete"),
+    
 ]
