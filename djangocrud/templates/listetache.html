@@ -1,36 +1,41 @@
- <!DOCTYPE html>
- <html>
- <head>
- 	<meta charset="utf-8">
- 	<title>listetache</title>
- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+{% extends 'home.html' %}
+{% block content %}
 
- </head>
- <body>
- 	<table class="table table-dark">
- 		<thead>
- 			<tr>
-	 			<th>Nom Tache</th>
-	 			<th>Description</th>
-	 			<th>Debut Tache</th>
-	 			<th>FinTache</th>
- 			</tr>
- 		</thead>
- 		<tbody>
- 			{% for obj in object_tache %}
- 			<tr>
-		 		<td>{{ obj.nomtache }}</td>
-		 		<td>{{ obj.description }}</td>
-		 		<td>{{ obj.debut }}</td>
-		 		<td>{{ obj.fin }}</td>
-		 		<td><a href="{% url 'crudapp:update' obj.id %}"><button>UPDATE</button></a></td>
-		 		<td><a href="{% url 'crudapp:delete' obj.id %}"><button>DELETE</button></a></td>
-		 	</tr>
+	<!DOCTYPE html>
+	 <html>
+	 <head>
+	 	<meta charset="utf-8">
+	 	<title>listetache</title>
+	 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-	 		{% endfor %}
- 		</tbody>
+	 </head>
+	 <body>
+	 	<table class="table table-dark">
+	 		<thead>
+	 			<tr>
+		 			<th>Nom Tache</th>
+		 			<th>Description</th>
+		 			<th>Debut Tache</th>
+		 			<th>FinTache</th>
+	 			</tr>
+	 		</thead>
+	 		<tbody>
+	 			{% for obj in object_tache %}
+	 			<tr>
+			 		<td>{{ obj.nomtache }}</td>
+			 		<td>{{ obj.description }}</td>
+			 		<td>{{ obj.debut }}</td>
+			 		<td>{{ obj.fin }}</td>
+			 		<td><a href="{% url 'crudapp:update' %}"><button>UPDATE</button></a></td>
+			 		<td><a href="{% url 'crudapp:delete' %}"><button>DELETE</button></a></td>
+			 	</tr>
 
- 	</table>
+		 		{% endfor %}
+	 		</tbody>
 
- </body>
- </html>
+	 	</table>
+
+	 </body>
+	 </html>
+
+{% endblock %} 

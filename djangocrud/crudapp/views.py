@@ -56,5 +56,5 @@ def updateTache(request, id):
 def deleteTache(request, id):
 	instance = Tache.objects.get(id=id)
 	instance.delete()
-	return redirect ("listetache.html")
+	return redirect ("delete.html")
 
