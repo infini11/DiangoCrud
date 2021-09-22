@@ -32,7 +32,7 @@ dask==0.13.0
 datashape==0.5.4
 decorator==4.0.11
 dill==0.2.5
-Django==3.0.3
+Django==3.1.13
 docutils==0.13.1
 et-xmlfile==1.0.1
 fastcache==1.0.2
